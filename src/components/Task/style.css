@@ -1,0 +1,91 @@
+ 
+.input{
+    font-size: 12.8px;
+    width: 30% ;
+    transition: all .4s ease-out;
+}
+.input:focus{
+    width: 100%;
+    outline: 0;
+    border: 0;
+}
+/* 
+p{
+    animation: show .8s   ;
+    background-color: transparent;
+} */
+@keyframes show {
+    from{
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.delete{
+    border: .5px solid lightgray;
+    outline: 0;
+    border-radius: 4px;
+    height: 30px;
+    cursor: pointer;
+    transition: all .5s;
+    text-align: center;
+    line-height: 30px;
+}
+
+.person{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px auto;
+    border-radius: 5px;
+    background:  #e9d8dd;
+    padding: 20px;
+    transition: all .2s ;
+    animation: show .4s;
+}
+.done{
+    position: relative;
+    font-size: 16px;
+}
+.done::before{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 45%;
+    width: 100%;
+    height: 1.5px;
+    background: #350d3a;
+    animation: doneWorks .6s ;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+
+}
+.done::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 58%;
+    width: 100%;
+    height: 1.5px;
+    background: #350d3a;
+    animation: doneWorks .6s;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+@keyframes doneWorks{
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+}
+
+.person:hover{
+    transform: scale(1.05);
+}
+.person div{
+    background-color: transparent;
+}

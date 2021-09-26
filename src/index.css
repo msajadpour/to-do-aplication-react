@@ -1,0 +1,45 @@
+ @font-face{
+    font-family: yekan;
+    src: url(./assets/font/BYekan-webfont.woff),
+         url(./assets/font/BYekan-webfont.ttf),
+         url(./assets/font/BYekan-webfont.eot)
+}
+
+*{
+    text-align: center;
+    font-family: yekan ;
+    direction: rtl;
+}
+
+body{
+    background: rgb(227,227,227);
+    background: linear-gradient(90deg, rgba(227,227,227,1) 0%, rgba(250,229,229,1) 49%, rgba(208,196,208,1) 100%, rgba(252,176,69,1) 100%);
+
+}
+
+button:focus{
+    outline: 0;
+}
+.addTask{
+    position: relative;
+    border: none;
+    background: #e9d8dd;
+    padding: 5px 20px;
+    cursor: pointer;
+    transition: all .4s;
+}
+.addTask::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    right: 50%;
+    left: 50%;
+    transform: translate(50% , -50%);
+    height: 1px;
+    background:  rgb(53 13 58);
+    width: 0;
+    transition: all .5s;
+}
+.addTask:hover::before{
+    width: 100%;
+}

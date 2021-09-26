@@ -1,0 +1,49 @@
+.person{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px auto;
+    border-radius: 5px;
+    background:#e3c6ce;
+    padding: 20px;
+    transition: all .2s ;
+    animation: show .4s;
+}
+.person:hover{
+    transform: scale(1.005);
+}
+.p{
+    animation: show .8s   ;
+    color: rgb(53 13 58);
+    margin-top: 10px;
+}
+.input{
+    border: .5px solid rgb(53 13 58);
+    outline: 0;
+    background-color: transparent;
+    font-size: 14px;
+    padding: 10px; 
+    border-radius: 0 5px 5px 0;
+    border-left: 0;
+    height: 30px;
+    width: 10%;
+}
+
+.add{
+    background: transparent;
+    line-height: 0;
+    border: .5px solid rgb(53 13 58);
+    border-radius: 5px 0 0 5px;
+    border-right: navajowhite;
+}
+@keyframes show {
+    from{
+        transform: translateY(10px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
